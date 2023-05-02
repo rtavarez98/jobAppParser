@@ -2,8 +2,8 @@ const {MongoClient} = require('mongodb');
 const {ObjectId} = require('mongodb');
 
 let instance = null;
-const uri = "mongodb+srv://rtavarez:wordpass@jobapplications.7oysfzn.mongodb.net/?retryWrites=true&w=majority"; //uri to database
-
+require('dotenv').config();
+const uri = process.env.MONGO_URI;//uri to database
 const client = new MongoClient(uri);
 
 class DbService{
