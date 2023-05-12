@@ -1,9 +1,11 @@
 //const puppeteer = require('puppeteer');
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 require('dotenv').config();
 app.use(express.json() );
+app.use(cors() );
 const dbService = require('./dbService.js');
 
 //app.post('/create', (req, res) => { //request contains url
