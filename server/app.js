@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 
+require('dotenv').config();
 app.use(express.json() );
 const dbService = require('./dbService.js');
 
@@ -92,7 +93,7 @@ async function jobSearch(url) { //
     //return jobInfo;
 }
 
-app.listen(3001, '0.0.0.0');
+app.listen(process.env.PORT || 3001, '0.0.0.0');
 
 //check if logged in linkedin?
     //assume logged in for now

@@ -13,7 +13,7 @@ function Main() {
     //const urlRef = useRef();
 
     const fetchData = () => {
-        fetch('/read', {
+        fetch('https://jobappparser-production.up.railway.app/read', {
             headers:{
                 'Content-type': 'application/json'
             },
@@ -29,7 +29,7 @@ function Main() {
 
     //function addApp(){ //return error if url is empty or not valid
         //const url = urlRef.current.value;
-        //fetch('/create', {
+        //fetch('https://jobappparser-production.up.railway.app/create', {
             //headers:{
                 //'Content-type': 'application/json'
             //},
@@ -52,7 +52,7 @@ function Main() {
         const company = companyRef.current.value;
         const location = locationRef.current.value;
         const pay = payRef.current.value;
-        fetch('/createManual', {
+        fetch('https://jobappparser-production.up.railway.app/createManual', {
             headers:{
                 'Content-type': 'application/json'
             },
@@ -72,7 +72,7 @@ function Main() {
     * fetches the "/delete" method from the backend to delete an application from the database
     */
     function deleteApp(id){
-        fetch('/delete', {
+        fetch('https://jobappparser-production.up.railway.app/delete', {
             headers:{
                 'Content-type': 'application/json'
             },
@@ -90,7 +90,7 @@ function Main() {
     */
     function editApp(id){
         let newStatus = prompt("Current Status");
-        fetch('/update', {
+        fetch('https://jobappparser-production.up.railway.app/update', {
             headers:{
                 'Content-type': 'application/json'
             },
