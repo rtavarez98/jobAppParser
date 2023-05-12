@@ -92,7 +92,7 @@ async function jobSearch(url) { //
     //return jobInfo;
 }
 
-app.listen(3001, () => console.log('app is running') );
+app.listen(3001, '0.0.0.0');
 
 //check if logged in linkedin?
     //assume logged in for now
